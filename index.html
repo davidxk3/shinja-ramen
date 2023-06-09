@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/3021dfb2e8.js" crossorigin="anonymous"></script>
+    <title>Shinja Ramen</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <img src="images/ramen_logo.png" alt="Company logo" height="70">
+            <h1 class="logo_name">Shinja Ramen</h1>
+        </a>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order">Order Online</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button>Download App</button></li>
+        </ul>
+        <div class="hamburger_menu">
+            <i class="fa-solid fa-bars" style="color: #ff4122"></i>
+        </div>
+    </nav>
+
+    <!-- Script for hamburger menu -->
+    <script>
+        
+    </script>
+
+    <!-- Landing Page - Specials -->
+    <div class="slider_container" id="home">
+    <div class="slider">
+        <h1>Shinja Specials</h1>
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="images/specials/1st.jpg" alt="first special">
+            </div>
+            <div class="slide second">
+                <img src="images/specials/2nd.jpg" alt="second special">
+            </div>
+            <div class="slide third">
+                <img src="images/specials/3rd.jpg" alt="third special">
+            </div>
+            
+            <!-- Auto navigation -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <!-- Manual navigation -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+
+            const current = document.getElementById('radio' + counter);
+            current.style.backgroundColor = '#ff4122';
+
+            if (counter > 3) {
+                counter = 1;
+            }}, 4000); 
+    </script> 
+    
+    <div class="space"></div>
+
+    <!-- About Page -->
+    <div class="section_container" id="about">
+        <div class="about_title">
+            <h1>About</h1>
+        </div>
+        <div class="about_information">
+            <div class="about_text">
+                <h1>Our Ramen</h1>
+                <p>From the broth to the noodles, all our ingredients are freshly prepared.
+                    Watch as our chefs make your ramen live!
+                    We offer many flavors! Included but not limited to shoyu, shio, miso, and tonkatsu.
+                </p>
+            </div>
+            <div class="about_image1">
+            </div>
+        </div>
+        <div class="about_information">
+            <div class="about_image2">
+            </div>
+            <div class="about_text">
+                <h1>Our Goal</h1>
+                <p>Local shop situated in downtown Toronto at 123 Main Street!
+                    Our restaurant seeks to recreate the authencity and deliciousness of Japanese ramen.
+                    Come and try our ramen out, we're here to provide you the experience of good ramen!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="space"></div>
+
+    <!-- Menu Page -->
+    <div class="section_container" id="menu">
+        <div class="menu_title">
+            <h1>Menu</h1>
+        </div>
+        <div class="menu_options">
+            <button class="options">Specials</button>
+            <button class="options">Ramen</button>
+            <button class="options">Combos</button>
+            <button class="options">Desserts</button>
+            <button class="options">Drinks</button>
+            <button class="options">Sides</button>
+        </div>
+        <div class="food_type">
+            <h1>Specials</h1>
+            <hr>
+        </div>
+        <div class="food_type">
+            <h1>Ramen</h1>
+            <hr>
+        </div>
+        <div class="food_type">
+            <h1>Combos</h1>
+            <hr>
+        </div>
+        <div class="food_type">
+            <h1>Desserts</h1>
+            <hr>
+        </div>
+        <div class="food_type">
+            <h1>Drinks</h1>
+            <hr>
+        </div>
+        <div class="food_type">
+            <h1>Sides</h1>
+            <hr>
+        </div>
+    </div>
+
+    <script>
+        const options = document.querySelectorAll(".options");
+
+        function turnActive(event) {
+            const clicked = event.target;
+            options.forEach(button => button.classList.remove('active'));
+            console.log(clicked, ' was clicked');
+            clicked.classList.add('active');
+        }
+
+        options.forEach(button => button.addEventListener('click', turnActive));
+    </script>
+
+
+    <!-- Footer 
+    <footer class="footer">
+    </footer>-->
+
+
+</body>
+</html>
