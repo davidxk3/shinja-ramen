@@ -631,6 +631,8 @@ body {
     border: 5px solid white;
     transition: 0.5s;
     margin: 50px;
+    width: 300px;
+    height: 300px;
     isolation: isolate;
 }
 
@@ -645,6 +647,57 @@ body {
 
 #uber {
     background-color: #6fd088;
+}
+
+@media screen and (max-width: 1200px) {
+    .order_heading h2 {
+        font-size: 30px;
+    }
+
+    .order_container {
+        height: 500px;
+    }
+
+    .order_container img {
+        height: 250px;
+        width: 250px;
+        margin: 25px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .order_heading h1 {
+        font-size: 100px;
+    }
+
+    .order_container {
+        height: 400px;
+    }
+
+    .order_container img {
+        height: 180px;
+        width: 180px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .order_heading h1 {
+        font-size: 75px;
+    }
+    .order_heading h2 {
+        font-size: 25px;
+    }
+
+    .order_container {
+        height: 300px;
+    }
+
+    .order_container img {
+        height: 120px;
+        width: 120px;
+        margin: 5px;
+    }
 }
 
 .contact_heading {
@@ -721,7 +774,7 @@ body {
 .form_button {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 25px;
-    width: 5%;
+    width: 10%;
     align-items: center;
     margin: 25px;
     margin-bottom: 100px;
@@ -735,4 +788,55 @@ body {
     color: white;
     background: #ed3419;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .form_group {
+        width: 200%;
+    }
+    .form_button {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .contact_heading h1 {
+        font-size: 100px;
+    }
+
+    .contact_heading p {
+        font-size: 15px;
+    }
+
+    .form_group {
+        width: 100%;
+    }
+
+    .form_button {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contact_heading h1 {
+        font-size: 60px;
+    }
+
+    .contact_heading p {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        font-size: 15px;
+    }
+
+    .form_group {
+        width: 85%;
+    }
+
+    .form_group input, .form_group textarea {
+        font-size: 13px;
+    }
+    
+    .form_button {
+        width: 25%;
+    }
 }
