@@ -354,6 +354,7 @@ body {
 }
 
 .space {
+    position: relative;
     background: black;
     min-height: 100px;
 }
@@ -720,6 +721,7 @@ body {
 
 .contact_heading h1 {
     color: #ff4122;
+    padding-top: 3rem;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 125px;
     isolation: isolate;
@@ -839,4 +841,211 @@ body {
     .form_button {
         width: 25%;
     }
+}
+
+/* Download App */
+.download_app {
+    position: relative;
+    background: #ff6242;
+    height: 1000px;
+}
+
+.download-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.download-waves svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 124px;
+}
+
+.download-waves .shape-fill {
+    fill: #000000;
+}
+
+.download_content {
+    display: flex;
+    height: 670px;
+}
+
+.left_download {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+    height: 670px;
+    width: 50%;
+}
+
+.left_download h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    padding-left: 5rem;
+}
+
+.left_download p {
+    padding-left: 5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 28%;
+}
+
+.right_download {
+    display: flex;
+    align-items: flex-end;
+    height: 670px;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.right_download img {
+    height: 65;
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #434343, #000000);  
+    background: linear-gradient(to right, #434343, #000000); 
+
+    border-radius: 30% 70% 70% 30% / 22% 55% 45% 78%;
+}
+
+.download_logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 25px;
+}
+
+.download_logo {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    padding: 0.8rem;
+    transition: 0.3s;
+}
+
+.download_logo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.download_logo h1 {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-size: 20px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.download_logo img {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Footer Page */
+.footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: black;
+    padding-top: 2rem;
+}
+
+.footer_information {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+}
+
+.column {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    align-items: left;
+}
+
+.column h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 25px;
+    color: #ed3419;
+}
+
+.column a, .column p {
+    font-weight: normal;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    color: #ff6242;
+    padding-bottom: 5px;
+}
+
+.column a:hover {
+    color: white;
+}
+
+.column p {
+    margin: 0;
+}
+
+.social_media {
+    display: flex;
+    flex-direction: row;
+}
+
+.social_media img {
+    margin-right: 25px;
+    background-color: #ff6242;
+    border-radius: 50% / 50%;
+    padding: 10px;
+}
+
+.social_media img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.footer hr {
+    border: 1px solid #fb3b1e;
+    width: 90%;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    height: 200px;
+}
+
+.copyright h1 {
+    padding-top: 5px;
+    color: #ff4122;
 }
