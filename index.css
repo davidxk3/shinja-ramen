@@ -427,7 +427,10 @@ nav {
     display: flex;
     height: 500px;
     width: 100%;
-    border-bottom: 1px solid #ff4122;
+}
+
+#last {
+    border-bottom: 5px solid #ff4122;
 }
 
 .about_text {
@@ -661,7 +664,6 @@ nav {
     justify-content: center;
     align-items: center;
     height: 575px;
-    border-bottom: 5px solid #ff4122;
 }
 
 .order_container img {
@@ -745,6 +747,7 @@ nav {
     text-align: center;
     height: 300px;
     position: relative;
+    border-bottom: 5px solid #ff4122;
 }
 
 .contact_heading::before {

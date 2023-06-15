@@ -128,7 +128,7 @@
             <div class="about_image1">
             </div>
         </div>
-        <div class="about_information">
+        <div class="about_information" id="last">
             <div class="about_image2">
             </div>
             <div class="about_text">
@@ -620,25 +620,23 @@
                         <textarea name="" id="msg" cols="20" rows="10" placeholder="Enter your message" required></textarea>
                     </div>
                 </div>
-                <button class="form_button" type="submit">Submit</button>
+                <button class="form_button" onclick="checkSubmit()">Submit</button>
             </form>
         </div>
     </div>
 
     <script>
-        var button = document.querySelector('.form_button');
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const text = document.getElementById('subject').value;
-        const msg = document.getElementById('msg').value;
+        function checkSubmit() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const msg = document.getElementById('msg').value;
 
-        button.addEventListener('click', function () {
-            if (name.trim() !== '' && email.trim() !== '' && text.trim() !== '' && msg.trim() !== '') {
-                alert("Thank you for the message. We will respond in 1-2 business days!");
-                return;
-            }
-        });
-
+            if (name.trim() !== '' && email.trim() !== '' && subject.trim() !== '' && msg.trim() !== '') {
+                event.preventDefault;
+                alert("Thank you for your message! We will respond within 1-2 business days");
+            } 
+        }
     </script>
     
     <div class="space">
@@ -661,11 +659,11 @@
                 New items will be released on our menu!</p>
                  <div class="download_logos">
                     <div class="download_logo">
-                        <img src="images/apple_logo.png" height="30" width="30">
+                        <a href="https://www.apple.com/ca/app-store" target="_blank"><img src="images/apple_logo.png" height="30" width="30"></a>
                         <h1>App Store</h1>
                     </div>
                     <div class="download_logo">
-                        <img src="images/google_logo.png" height="30" width="30">
+                        <a href="https://play.google.com" target="_blank"><img src="images/google_logo.png" height="30" width="30"></a>
                         <h1>Google Store</h1>
                     </div>
                 </div>
