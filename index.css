@@ -113,6 +113,7 @@ nav {
     }
 
     .links {
+        visibility: hidden;
         opacity: 0;
         display: flex;
         position: absolute;
@@ -127,6 +128,7 @@ nav {
     }
     
     .links.active {
+        visibility: visible;
         opacity: 1;
     }
 }
