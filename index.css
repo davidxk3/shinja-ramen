@@ -91,6 +91,15 @@ nav {
     display: none;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .hamburger_menu { 
         cursor: pointer;
@@ -99,49 +108,28 @@ nav {
         top: 50;
     }
 
-    .navbar {
-        height: 0;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: black;
-        transition: 0.2s;
-        overflow: hidden;
-    }
-
-    .navbar.active {
-        background-color: #090909;
-        height: 225px;
-    }
-
-    .navbar ul {
-        display: block;
-        width: fit-content;
-        margin: 25px auto 0 auto;
-        text-align: center;
-        transition: 0.5s;
-        opacity: 0;
-    }
-
-    .navbar.active ul {
-        opacity: 1;
-    }
-
-    .navbar ul li a {
-        margin-bottom: 12px;
-    }
-}
-
-/*    .logo {
+    .logo {
         margin-left: 1.5rem;
     }
 
     .links {
-        display: none;
+        opacity: 0;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 80px;
+        width: 100%;
+        flex-direction: column;
+        background-color: black;
+        box-sizing: border-box;
+        transition: opacity 0.5s ease;
     }
-}*/
+    
+    .links.active {
+        opacity: 1;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .logo {
@@ -539,15 +527,6 @@ nav {
     justify-content: center;
     align-items: center;
     animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
 }
 
 .food_type h1 {

@@ -31,19 +31,25 @@
 
     <!-- Script for hamburger menu -->
     <script>
-        var hamburger = document.querySelector(".hamburger_menu");
-        var nav = document.querySelector(".navbar");
-        var links = document.querySelectorAll(".link");
+        var menu = document.querySelector('.hamburger_menu');
+        var links = document.querySelector('.links');
+        var eachLink = document.querySelectorAll('.link');
 
-        hamburger.onclick = toggleNav;
-        links.forEach((link) => (link.onclick = toggleNav));
-
-        function toggleNav() {
-            if (window.innerWidth <= 700) {
-                nav.classList.toggle("active");
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 980) {
+                links.classList.remove('active');
             }
-        }
+        });
 
+        eachLink.forEach(function(link) {
+            link.addEventListener('click', function() {
+                links.classList.remove('active');
+            });
+        });
+
+        menu.addEventListener("click", function() {
+            links.classList.toggle('active');
+        });
     </script>
 
     <!-- Landing Page - Specials -->
