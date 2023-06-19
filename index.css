@@ -403,6 +403,49 @@ nav {
     filter: brightness(50%);
 }
 
+.bottom-tilt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bottom-tilt svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+}
+
+.bottom-tilt .shape-fill {
+    fill: #000000;
+}
+
+.bottom-tilt2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bottom-tilt2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.bottom-tilt2 .shape-fill {
+    fill: #000000;
+}
+
 .about_title h1 {
     color: #ff4122;
     font-family: 'Bebas Neue', sans-serif;
@@ -414,12 +457,9 @@ nav {
 .about_information {
     background-color: black;
     display: flex;
+    position: relative;
     height: 500px;
     width: 100%;
-}
-
-#last {
-    border-bottom: 5px solid #ff4122;
 }
 
 .about_text {
@@ -594,8 +634,6 @@ nav {
     }
 }
 
-
-
 .order_heading::before {
     content: '';
     background: url('https://images.pexels.com/photos/4008382/pexels-photo-4008382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
@@ -612,14 +650,15 @@ nav {
     text-align: center;
     height: 500px;
     position: relative;
-    border-bottom: 5px solid #ff4122;
 }
 
 .order_heading h1 {
+    padding-top: 50px;
     color: #ff4122;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 125px;
     isolation: isolate;
+    margin: 0;
 }
 
 .order_heading h2 {
@@ -627,15 +666,29 @@ nav {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
     isolation: isolate;
+    padding-bottom: 150px;
+    z-index: 2;
 }
 
-.order_container::before {
-    content: '';
-    background: url('https://images.pexels.com/photos/11069351/pexels-photo-11069351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
-    background-size: cover;
+.bottom-book {
     position: absolute;
-    inset: 0;
-    filter: brightness(20%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bottom-book svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.bottom-book .shape-fill {
+    fill: #000000;
 }
 
 .order_container {
@@ -653,7 +706,6 @@ nav {
     margin: 50px;
     width: 300px;
     height: 300px;
-    isolation: isolate;
 }
 
 .order_container img:hover {
